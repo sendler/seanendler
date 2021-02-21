@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" >
+	<generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator>
+	<link href="https://sendler.github.io/seanendler.github.io/feed.xml" rel="self" type="application/atom+xml" />
+	<link href="https://sendler.github.io/seanendler.github.io/" rel="alternate" type="text/html" />
+	<updated>2020-10-14T22:08:02-04:00</updated>
+	<id>https://sendler.github.io/seanendler.github.io/feed.xml</id>
+	<title type="html">Sean Endler</title>
+	<subtitle>My Networking and Cybersecurity online notebook and blog site.
+</subtitle>
+	<author>
+		<name>Sean Endler</name>
+	</author>
+	<entry>
+		<title type="html">Trying somethig new.</title>
+		<link href="https://sendler.github.io/seanendler.github.io/linux/2020/09/30/SMB-Enumeration-Issue-Fix.html" rel="alternate" type="text/html" title="Smbclient Giving Weird Errors - A Fix." />
+		<published>2020-09-30T18:55:00-04:00</published><updated>2020-09-30T18:55:00-04:00</updated>
+		<id>https://sendler.github.io/seanendler.github.io/linux/2020/09/30/SMB-Enumeration-Issue-Fix</id>
+		<content type="html" xml:base="https://sendler.github.io/seanendler.github.io/linux/2020/09/30/SMB-Enumeration-Issue-Fix.html">&lt;p&gt;So while running through some CTFs I noticed that on almost every machine, if I were enumerating SMB using smbclient, I would get this weird error.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Walkthroughs/Lame/smbclient.png&quot; alt=&quot;smbclient error&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Walkthroughs/Legacy/smbclient.png&quot; alt=&quot;smbclient error 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After doing some research, I found out that it was because smbclient was trying to use a higher version of Samba. So I’m writing this quick post as a reminder to myself how to fix it but hopefully it will help some of you guys out as well.&lt;/p&gt;
+
+&lt;p&gt;First find the Samba conf file. It’s almost always in /etc/samba/smb.conf. I ran a quick find just in case.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Linux/SambaConfPost/SambaVersionFind.png&quot; alt=&quot;Finding Samba Conf file&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then I hopped onto the conf and added NT1 as the lowest accepted version.&lt;/p&gt;
+
+&lt;p&gt;I added this to the Global section of the file -&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;min protocol = NT1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/Linux/SambaConfPost/SambaConfEdit.png&quot; alt=&quot;SMB Conf Edit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;This is a good time to mention that you most likely want to have your SMB version as high as possible on machines you’d like to protect from SMB vulnerabilities. This works fine for a pentesting machine, but any other machine maybe should be set to highest possible. Here are some options for setting it. Here are some more options for setting the version.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;min protocol = SMB2
+min protocol = SMB3
+client min protocol = SMB2
+max protocol = SMB2
+protocol = SMB3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Notice you can set it to a specific SMB version, lowest version, highest version, and the same settings for client side.&lt;/p&gt;
+
+&lt;p&gt;Okay lets go back and test to see what happens.&lt;br /&gt;
+&lt;em&gt;But first&lt;/em&gt; - make sure to reset your smb service.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo systemctl restart smbd.service
+or 
+sudo systemctl restart smb.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;when I restart the service it still didn’t work correctly. So I restarted the machine to make sure the correct service was restarted and it worked!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/Linux/SambaConfPost/SMBFixed.png&quot; alt=&quot;Imagine of it working goes here&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay there ya go. Hope this helps if you’re getting similar NT errors while poking at CTFs or even pentesting!&lt;/p&gt;
+
+&lt;p&gt;Cheers, 
+Zack.&lt;/p&gt;</content>
+		<author>
+			<name>Sean Endler</name>
+		</author>
+		<category term="Linux" />
+		<summary type="html">So while running through some CTFs I noticed that on almost every machine, if I were enumerating SMB using smbclient, I would get this weird error.</summary>
+	</entry>
+	
