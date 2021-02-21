@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" >
 	<generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator>
-	<link href="https://sendler.github.io/seanendler.github.io/feed.xml" rel="self" type="application/atom+xml" />
-	<link href="https://sendler.github.io/seanendler.github.io/" rel="alternate" type="text/html" />
+	<link href="https://sendler.github.io/seanendler/feed.xml" rel="self" type="application/atom+xml" />
+	<link href="https://sendler.github.io/seanendler/" rel="alternate" type="text/html" />
 	<updated>2020-10-14T22:08:02-04:00</updated>
-	<id>https://sendler.github.io/seanendler.github.io/feed.xml</id>
+	<id>https://sendler.github.io/seanendler/feed.xml</id>
 	<title type="html">Sean Endler</title>
 	<subtitle>My Networking and Cybersecurity online notebook and blog site.
 </subtitle>
@@ -13,10 +13,10 @@
 	</author>
 	<entry>
 		<title type="html">Trying somethig new.</title>
-		<link href="https://sendler.github.io/seanendler.github.io/linux/2020/09/30/SMB-Enumeration-Issue-Fix.html" rel="alternate" type="text/html" title="Smbclient Giving Weird Errors - A Fix." />
+		<link href="https://sendler.github.io/seanendler/linux/2020/09/30/SMB-Enumeration-Issue-Fix.html" rel="alternate" type="text/html" title="Smbclient Giving Weird Errors - A Fix." />
 		<published>2020-09-30T18:55:00-04:00</published><updated>2020-09-30T18:55:00-04:00</updated>
-		<id>https://sendler.github.io/seanendler.github.io/linux/2020/09/30/SMB-Enumeration-Issue-Fix</id>
-		<content type="html" xml:base="https://sendler.github.io/seanendler.github.io/linux/2020/09/30/SMB-Enumeration-Issue-Fix.html">&lt;p&gt;So while running through some CTFs I noticed that on almost every machine, if I were enumerating SMB using smbclient, I would get this weird error.&lt;/p&gt;
+		<id>https://sendler.github.io/seanendler/linux/2020/09/30/SMB-Enumeration-Issue-Fix</id>
+		<content type="html" xml:base="https://sendler.github.io/seanendler/linux/2020/09/30/SMB-Enumeration-Issue-Fix.html">&lt;p&gt;So while running through some CTFs I noticed that on almost every machine, if I were enumerating SMB using smbclient, I would get this weird error.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/Walkthroughs/Lame/smbclient.png&quot; alt=&quot;smbclient error&quot; /&gt;&lt;/p&gt;
 
