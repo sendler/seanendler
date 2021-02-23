@@ -26,7 +26,7 @@ If you’re looking for my Resume or my bio, see below.
 Also here are all my socials.
 
 [Twitter](http://twitter.com/sendler32)    
-[Youtube](https://www.youtube.com/channel/UCayyiUXtg6_dY-7KT4MKI6Q)
 [Github](https://github.com/sendler)  
 [Twitch](https://www.twitch.tv/sendlernm)  
 [TryHackMe](https://tryhackme.com/p/shadigest)
+[Youtube](https://www.youtube.com/channel/UCayyiUXtg6_dY-7KT4MKI6Q)
