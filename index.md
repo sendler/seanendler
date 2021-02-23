@@ -7,7 +7,7 @@ layout: home
 <html><p></p></html>
 
 # Hello.
-My name is Sean and I do Leadership and Cyber Security work.
+My name is Sean and I am into Leadership, DevOps and Information Security (InfoSec).
 I have spent years developing a foundation of Psychology and Technology skills, that have put me in a place to stand out from others.
 I do not believe you can be a good leader if you haven't gone through the trials and tribulations of your people. <br />
 Nor can you truly lead if you cannot relate and listen to your people.<br /><br />
