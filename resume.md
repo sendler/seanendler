@@ -1,7 +1,7 @@
 ---
 layout: resume
 title: Resume
-permalink: /Resume/
+permalink: /seanendler/resume/
 ---
 
 sendler31@gmail.com [Twitter](https://twitter.com/mehhsecurity) [Github](https://github.com/hiimzackjones) [Twitch](https://twitch.tv/mehhsecurity)
