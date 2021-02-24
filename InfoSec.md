@@ -1,5 +1,5 @@
 ---
 layout: InfoSec
 title: InfoSec
-permalink: /infosec/
+permalink: /seanendler/infosec/
 ---
