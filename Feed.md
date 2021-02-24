@@ -1,5 +1,5 @@
 ---
 layout: Feed
 title: Feed
-permalink: /feed/
+permalink: /seanendler/feed/
 ---
