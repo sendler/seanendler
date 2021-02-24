@@ -1,5 +1,5 @@
 ---
 layout: Python
 title: Python
-permalink: /python/
+permalink: /seanendler/python/
 ---
